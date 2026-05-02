@@ -276,7 +276,7 @@ def buildNAV(dstdir, title, chapters, chapternames):
         f.write("<li><a href=\"" + filename[0].replace("\\", "/") + ".xhtml\">" + hescape(title) + "</a></li>\n")
     f.writelines(["</ol>\n",
                   "</nav>\n",
-                  "<nav epub:type=\"page-list\">\n",
+                  "<nav epub:type=\"toc\">\n",
                   "<ol>\n"])
     for chapter in chapters:
         folder = chapter[0].replace(os.path.join(dstdir, 'OEBPS'), '').lstrip('/').lstrip('\\\\')
